@@ -52,7 +52,7 @@ function quickSort(elements) {
 function removeDuplicatedItem(arr) {
 	var ret = [];
 
-	for(var i = 0, i < arr.length; i++) {
+	for(var i = 0,len = arr.length;i < len; i++) {
 		if (ret.indexOf(arr[i]) === -1) {
 			ret.push(arr[i]);
 		}
@@ -64,7 +64,7 @@ function removeDuplicatedItem(arr) {
 function removeDuplicatedItem2(arr) {
 	var tmp = {},ret = [];
 
-	for (var i = 0,i < arr.length; i++) {
+	for (var i = 0,len = arr.length;i < len; i++) {
 		if (!tmp[arr[i]]) {
 			//把数组存在对象里，检测
 			tmp[arr[i]] = 1;
