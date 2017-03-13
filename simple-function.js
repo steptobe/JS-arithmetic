@@ -47,6 +47,45 @@ function quickSort(elements) {
 }
 
 /** 快速排序  end **/
+
+/** 数组去重 **/
+function removeDuplicatedItem(arr) {
+	var ret = [];
+
+	for(var i = 0, i < arr.length; i++) {
+		if (ret.indexOf(arr[i]) === -1) {
+			ret.push(arr[i]);
+		}
+	}
+
+	return ret;
+}
+
+function removeDuplicatedItem2(arr) {
+	var tmp = {},ret = [];
+
+	for (var i = 0,i < arr.length; i++) {
+		if (!tmp[arr[i]]) {
+			//把数组存在对象里，检测
+			tmp[arr[i]] = 1;
+			ret.push(arr[i]);
+		}
+	}
+	return ret;
+}
+
+function removeDuplicatedItem3(arr) {
+	var ret = [];
+
+	arr.forEach(function(e, i, arr){
+		if (arr.indexOf(e) === i) {
+			ret.push(e);
+		}
+	});
+
+	return ret;
+}
+/** 数组去重 end **/
 var elements = [3, 1, 5, 7, 2, 4, 5];
 console.log('before' + elements);
 console.log(quickSort(elements));
