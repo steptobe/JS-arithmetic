@@ -45,6 +45,8 @@ function quickSort(elements) {
 	arr = quickSort(left).concat([pivot], quickSort(right));
 	return arr;
 }
+
+/** 快速排序  end **/
 var elements = [3, 1, 5, 7, 2, 4, 5];
 console.log('before' + elements);
 console.log(quickSort(elements));
